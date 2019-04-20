@@ -1,2 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.hrbing.shop.test"/>
+          package="com.hrbing.shop.test">
+
+    <application
+        android:supportsRtl="true"
+        android:allowBackup="true">
+
+        <activity android:name=".TestDataActivity"/>
+
+    </application>
+</manifest>
