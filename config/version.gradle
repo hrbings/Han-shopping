@@ -11,10 +11,15 @@ ext {
 
     //kotlin
     kotlin_stdlib_jdk7 = '1.3.21'
-    
+
     //support
     appcompat_v7 = '28.0.0'
     constraint_layout = '1.1.3'
+
+    //network
+    rxAndroidVersion = "2.0.2"
+    retrofitVersion = "2.4.0"
+    okHttpInterceptorVersion = "3.9.0"
 
     //androidTest
     test_junit = '4.12'

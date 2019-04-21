@@ -1,37 +1,54 @@
-apply plugin: 'com.android.library'
-
-apply plugin: 'kotlin-android-extensions'
-
-apply plugin: 'kotlin-android'
-
-apply from: "../config/variants.gradle"
+/* Apply Module base configurations */
+apply from: "../config/module.gradle"
 
 android {
-    compileSdkVersion projectCompileSdkVersion
+    productFlavors {
+        china {
+            ext {
+                gwBaseUrl = [staging: "https://ch-staging.com.cn",
+                             develop: "https://ch-develop.com.cn",
+                             product: "https://ch-product.com.cn"]
 
-    defaultConfig {
-        minSdkVersion projectMinSdkVersion
-        targetSdkVersion projectTargetSdkVersion
-        versionCode versionCode
-        versionName versionName
+                gwStagingPath = "/sta-api/"
+                gwDevelopPath = "/dev-api/"
+                gwproductPath = "/pro-api/"
+            }
+        }
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        global {
+            ext {
+                gwBaseUrl = [staging: "https://gl-staging.com.cn",
+                             develop: "https://gl-develop.com.cn",
+                             product: "https://gl-product.com.cn"]
 
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                gwStagingPath = "/sta-api/"
+                gwDevelopPath = "/dev-api/"
+                gwproductPath = "/pro-api/"
+            }
         }
     }
 
+    libraryVariants.all { variant ->
+        def env = variant.productFlavors*.properties.get(0).name
+        for (def flavor : variant.productFlavors) {
+            if (flavor.ext.properties.containsKey("gwBaseUrl")) {
+                variant.buildConfigField "String", "GW_BASE_URL", "\"${flavor.ext.gwBaseUrl[env]}\""
+                variant.buildConfigField "String", "GW_STAGING_PATH", "\"${flavor.ext.gwStagingPath}\""
+                variant.buildConfigField "String", "GW_DEVELOP_PATH", "\"${flavor.ext.gwDevelopPath}\""
+                variant.buildConfigField "String", "GW_PRODUCT_PATH", "\"${flavor.ext.gwproductPath}\""
+            }
+        }
+    }
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_stdlib_jdk7"
     implementation "com.android.support:appcompat-v7:$appcompat_v7"
-    implementation "com.android.support.constraint:constraint-layout:$constraint_layout"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttpInterceptorVersion"
     testImplementation "junit:junit:$test_junit"
     androidTestImplementation "com.android.support.test:runner:$test_runner"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$test_espresso_core"
