@@ -2,7 +2,6 @@
 <resources>
 
     <style name="appButton">
-        <item name="android:textAppearance">@style/adiHausDinBold13</item>
         <item name="android:letterSpacing">0.2</item>
         <item name="android:layout_height">48dp</item>
         <item name="android:layout_width">match_parent</item>
