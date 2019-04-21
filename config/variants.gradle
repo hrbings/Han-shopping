@@ -1,0 +1,53 @@
+/**
+ * Please apply this file to the [build.gradle] in all internal modules.
+ * You can add specific configurations/variables in each module.
+ */
+
+android {
+    /**
+     * Flavor dimensions
+     * [environment]
+     * [market]
+     */
+    flavorDimensions "environment", "market"
+
+    productFlavors {
+        /**
+         * markets
+         */
+        china {
+            dimension "market"
+        }
+
+        global {
+            dimension "market"
+        }
+
+        /**
+         * environments
+         */
+        production {
+            dimension "environment"
+        }
+
+        develop {
+            dimension "environment"
+        }
+
+        staging {
+            dimension "environment"
+        }
+    }
+
+    /**
+     * ignores unused build variants to speed up the project synchronization
+     */
+    variantFilter { variant ->
+        def environment = variant.getFlavors().get(0).name
+        def isRelease = variant.buildType.name == "release"
+
+        if (environment == "develop" & isRelease) {
+            setIgnore(true)
+        }
+    }
+}
