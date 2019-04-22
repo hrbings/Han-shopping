@@ -25,6 +25,7 @@ ext {
     //other
     arouterApiVersion = '1.4.1'
     arouterCompilerVersion = '1.2.2'
+    gsonVersion = '2.8.5'
 
     //androidTest
     test_junit = '4.12'
