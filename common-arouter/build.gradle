@@ -1,0 +1,24 @@
+/* Apply Module base configurations */
+apply from: "../config/module.gradle"
+
+android {
+    //ARouter configuration
+    defaultConfig {
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_stdlib_jdk7"
+    implementation "androidx.appcompat:appcompat:$androidx_appcompat"
+    implementation "com.alibaba:arouter-api:$arouterApiVersion"
+    annotationProcessor "com.alibaba:arouter-compiler:$arouterCompilerVersion"
+}
+
+repositories {
+    mavenCentral()
+}

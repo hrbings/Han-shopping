@@ -1,1 +1,1 @@
-include ':app', ':common-test-data', ':common-network'
+include ':app', ':common-test-data', ':common-network', ':common-values', ':common-font', ':common-arouter'
