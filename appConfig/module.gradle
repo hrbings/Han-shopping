@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 /* Apply variant */
-apply from: '../config/variant.gradle'
+apply from: '../appConfig/variant.gradle'
 
 android {
     compileSdkVersion projectCompileSdkVersion

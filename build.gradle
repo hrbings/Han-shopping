@@ -2,7 +2,7 @@
 
 buildscript {
 
-    apply from: "config/version.gradle"
+    apply from: "appConfig/version.gradle"
 
     repositories {
         google()
