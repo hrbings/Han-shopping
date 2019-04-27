@@ -4,6 +4,7 @@ apply from: "../appConfig/module.gradle"
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_stdlib_jdk7"
     implementation "androidx.appcompat:appcompat:$androidx_appcompat"
+    implementation project(':common-values')
 }
 
 repositories {

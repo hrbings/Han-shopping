@@ -1,2 +1,2 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.hrbing.shop.core.window"/>
+          package="com.hrbing.shop.core.ui"/>
