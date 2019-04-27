@@ -4,6 +4,9 @@ import android.content.Context
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
 
+/**
+ * @author ...
+ */
 class AppTextView(context: Context,
                   attributeSet: AttributeSet?,
                   defStyleAttr: Int) : AppCompatTextView(context, attributeSet, defStyleAttr) {

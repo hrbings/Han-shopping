@@ -5,7 +5,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import java.util.concurrent.TimeUnit
 
 /**
- * @author RuiBing
+ * @author ...
  *
  * the OkHttpClientHelper provides a singleton object for global use
  */

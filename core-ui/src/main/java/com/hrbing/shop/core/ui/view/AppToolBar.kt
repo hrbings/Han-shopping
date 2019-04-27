@@ -5,6 +5,9 @@ import android.util.AttributeSet
 import androidx.appcompat.R
 import androidx.appcompat.widget.Toolbar
 
+/**
+ * @author ...
+ */
 class AppToolBar(context: Context,
                  attr: AttributeSet?,
                  defStyleAttr: Int) : Toolbar(context, attr, defStyleAttr) {

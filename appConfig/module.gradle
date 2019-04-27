@@ -1,64 +1,23 @@
-apply plugin: 'com.android.library'
-
-apply plugin: 'kotlin-android'
-
-apply plugin: 'kotlin-android-extensions'
-
-apply plugin: 'kotlin-kapt'
-
-/* Apply variant */
-apply from: '../appConfig/variant.gradle'
+/* library */
+apply from: '../appConfig/library.gradle'
 
 android {
-    compileSdkVersion projectCompileSdkVersion
-    buildToolsVersion projectBuildToolsVersion
-
     defaultConfig {
         minSdkVersion projectMinSdkVersion
         targetSdkVersion projectCompileSdkVersion
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
+}
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-
-    sourceSets {
-        main {
-            java.srcDirs += 'src/main/kotlin'
-        }
-
-        global {
-            java.srcDirs += 'src/global/kotlin'
-        }
-
-        china {
-            java.srcDirs += 'src/china/kotlin'
-        }
-
-        test {
-            java.srcDirs += 'src/test/kotlin'
-        }
-
-        androidTest {
-            java.srcDirs += 'src/androidTest/kotlin'
-        }
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-    lintOptions {
-        abortOnError false
-    }
-
-    androidExtensions {
-        experimental = true
-    }
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_stdlib_jdk7"
+    implementation "androidx.appcompat:appcompat:$androidx_appcompat"
+    implementation project(':common-arouter')
+    implementation project(':common-font')
+    implementation project(':common-network')
+    implementation project(':common-values')
+    implementation project(':core-base')
+    implementation project(':core-ui')
+    implementation project(':core-util')
 }

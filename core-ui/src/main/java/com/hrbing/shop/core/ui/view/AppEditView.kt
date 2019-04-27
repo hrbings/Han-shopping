@@ -5,6 +5,9 @@ import android.util.AttributeSet
 import androidx.appcompat.R
 import androidx.appcompat.widget.AppCompatEditText
 
+/**
+ * @author ...
+ */
 class AppEditView(context: Context,
                   attributeSet: AttributeSet?,
                   defStyleAttr: Int) : AppCompatEditText(context, attributeSet, defStyleAttr) {

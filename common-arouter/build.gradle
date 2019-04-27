@@ -1,5 +1,5 @@
 /* Apply Module base configurations */
-apply from: "../appConfig/module.gradle"
+apply from: "../appConfig/library.gradle"
 
 android {
     //ARouter configuration

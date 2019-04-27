@@ -7,6 +7,9 @@ import android.view.MotionEvent
 import androidx.appcompat.R
 import androidx.appcompat.widget.AppCompatButton
 
+/**
+ * @author ...
+ */
 class AppButton(context: Context,
                 attributeSet: AttributeSet?,
                 defStyleAttr: Int) : AppCompatButton(context, attributeSet, defStyleAttr) {

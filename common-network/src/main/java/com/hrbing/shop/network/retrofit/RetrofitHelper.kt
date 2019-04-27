@@ -6,7 +6,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 /**
- * @author RuiBing
+ * @author ...
  */
 class RetrofitHelper private constructor(val retrofit: Retrofit) {
 

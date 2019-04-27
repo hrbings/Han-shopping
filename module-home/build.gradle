@@ -1,0 +1,13 @@
+/* Apply Module base configurations */
+apply from: "../appConfig/module.gradle"
+
+dependencies {
+    implementation "com.android.support.constraint:constraint-layout:$constraint_layout"
+    testImplementation "junit:junit:$test_junit"
+    androidTestImplementation "com.android.support.test:runner:$test_runner"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$test_espresso_core"
+}
+
+repositories {
+    mavenCentral()
+}
