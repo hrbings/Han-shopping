@@ -2,7 +2,6 @@
 apply from: "../appConfig/module.gradle"
 
 dependencies {
-    implementation project(':module-profile')
     implementation "androidx.constraintlayout:constraintlayout:$androidx_constraintLayoutVersion"
     testImplementation "junit:junit:$test_junit"
     androidTestImplementation "com.android.support.test:runner:$test_runner"

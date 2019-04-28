@@ -1,4 +1,4 @@
-include ':app',
+include ':app', ':module-profile',
         ':common-test-data',
         ':common-network',
         ':common-arouter',
