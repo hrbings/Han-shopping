@@ -2,7 +2,6 @@
 apply from: "../appConfig/library.gradle"
 
 dependencies {
-    implementation project(':common-font')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_stdlib_jdk7"
     implementation "androidx.appcompat:appcompat:$androidx_appcompat"
 }

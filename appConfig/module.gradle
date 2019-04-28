@@ -14,9 +14,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_stdlib_jdk7"
     implementation "androidx.appcompat:appcompat:$androidx_appcompat"
     implementation project(':common-arouter')
-    implementation project(':common-font')
     implementation project(':common-network')
-    implementation project(':common-values')
     implementation project(':core-base')
     implementation project(':core-ui')
     implementation project(':core-util')
