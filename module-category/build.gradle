@@ -1,0 +1,6 @@
+/* Apply Module base configurations */
+apply from: "../appConfig/module.gradle"
+
+dependencies {
+
+}
