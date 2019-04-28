@@ -1,4 +1,4 @@
-include ':app', ':module-home',
+include ':app', ':module-home', ':module-cart',
         ':common-test-data',
         ':common-network',
         ':common-arouter',
