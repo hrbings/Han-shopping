@@ -1,8 +1,9 @@
-include ':app', ':module-profile',
+include ':app', ':module-home',
         ':common-test-data',
         ':common-network',
         ':common-arouter',
         ':core-base',
         ':core-ui',
         ':core-util',
-        ':module-home'
+        ':module-main',
+        ':module-profile'
