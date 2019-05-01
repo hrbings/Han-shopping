@@ -1,4 +1,4 @@
-package com.hrbing.shop.module.home;
+package com.hrbing.shop.module.main;
 
 import org.junit.Test;
 

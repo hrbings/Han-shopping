@@ -20,7 +20,7 @@ class OkHttpClientHelper private constructor(val okHttpClient:OkHttpClient) {
          * the method to provide single instance
          * @sample OkHttpClientHelper
          */
-        fun getInstance(property: String) = instance ?: synchronized(this) {
+        fun getInstance() = instance ?: synchronized(this) {
             instance ?: OkHttpClientHelper(getOkHttpClient()).also { instance = it }
         }
 

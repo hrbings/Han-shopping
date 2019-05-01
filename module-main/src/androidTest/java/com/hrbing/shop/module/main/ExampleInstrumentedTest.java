@@ -1,4 +1,4 @@
-package com.hrbing.shop.module.home;
+package com.hrbing.shop.module.main;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -23,6 +23,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.hrbing.shop.module.home.test", appContext.getPackageName());
+        assertEquals("com.hrbing.shop.module.main.test", appContext.getPackageName());
     }
 }

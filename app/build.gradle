@@ -27,12 +27,12 @@ android {
 }
 
 dependencies {
+    implementation project(':core-base')
+    implementation project(':module-main')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_stdlib_jdk7"
-    implementation "com.android.support:appcompat-v7:$appcompat_v7"
-    implementation "com.android.support.constraint:constraint-layout:$constraint_layout"
+    implementation "androidx.appcompat:appcompat:$androidx_appcompat"
+    implementation "androidx.constraintlayout:constraintlayout:$androidx_constraintLayoutVersion"
     testImplementation "junit:junit:$test_junit"
     androidTestImplementation "com.android.support.test:runner:$test_runner"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$test_espresso_core"
-    implementation project(':common-network')
-    implementation project(':common-test-data')
 }

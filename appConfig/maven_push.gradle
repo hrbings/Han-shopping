@@ -1,0 +1,10 @@
+/* apply library */
+apply plugin: 'maven'
+
+def isReleaseBuild(){
+    return versionName.contains("release")
+}
+
+def getSnapShotRepositoryUrl(){
+
+}

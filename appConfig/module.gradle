@@ -1,4 +1,4 @@
-/* library */
+/* apply library */
 apply from: '../appConfig/library.gradle'
 
 android {
